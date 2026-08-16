@@ -2,13 +2,16 @@
  * @Author: Skixkk skixkk7@gmail.com
  * @Date: 2026-08-16 16:07:54
  * @LastEditors: Skixkk skixkk7@gmail.com
- * @LastEditTime: 2026-08-16 16:22:43
+ * @LastEditTime: 2026-08-17 02:15:53
  * @FilePath: \Alininin.github.io\README.md
  * @Description: `https://alininin.github.io/` Alininin README
 -->
 # I'm Alininin
 
+[![Deploy Nuxt + VitePress Docs to GitHub Pages](https://github.com/Alininin/Alininin.github.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/Alininin/Alininin.github.io/actions/workflows/deploy.yml)
+
 > Algorithm Engineer
+
 
 ## Quick Start
 
