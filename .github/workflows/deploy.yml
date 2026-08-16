@@ -53,6 +53,14 @@ jobs:
           mkdir -p .output/public/docs
           cp -r docs/.vitepress/dist/* .output/public/docs/
 
+      - name: Print directory structure for debug
+        run: |
+          echo "===== .output/public ====="
+          ls -l -a .output/public
+          echo ""
+          echo "===== .output/public/docs ====="
+          ls -l -a .output/public/docs
+
   deploy:
     needs: build
     # PR阶段直接跳过部署Job，只做打包
