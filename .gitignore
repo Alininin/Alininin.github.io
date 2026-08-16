@@ -26,4 +26,7 @@ logs
 # docs
 docs/.vitepress/dist
 docs/.vitepress/cache
+
+# Global project cache directory (NEW‑ADD)
 cache/
+**/.cache
