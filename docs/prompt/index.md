@@ -78,7 +78,7 @@ PR Description：
 
 #### leave a commet
 
-- [Github 常见缩写黑话](Github-LGTM.md)
+- [Github 常见缩写黑话](./../github-lgtm/index.md)
 
 ### debug
 
