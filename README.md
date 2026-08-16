@@ -1,75 +1,32 @@
-# Nuxt Minimal Starter
+<!--
+ * @Author: Skixkk skixkk7@gmail.com
+ * @Date: 2026-08-16 16:07:54
+ * @LastEditors: Skixkk skixkk7@gmail.com
+ * @LastEditTime: 2026-08-16 16:22:43
+ * @FilePath: \Alininin.github.io\README.md
+ * @Description: `https://alininin.github.io/` Alininin README
+-->
+# I'm Alininin
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+> Algorithm Engineer
 
-## Setup
+## Quick Start
 
-Make sure to install dependencies:
+```Text
+node -v
+npm -v
 
-```bash
-# npm
-npm install
+# 查看 有没有 bun
+npm list -g
 
-# pnpm
-pnpm install
+# 安装 bun(如上一步有则省略这一步)
+npm install -g bun
 
-# yarn
-yarn install
+# 构建
+bun i
 
-# bun
-bun install
 ```
 
-## Development Server
+## tech stack
 
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+基于 `Nuxt` 的 `Minimal` 建立 `/` 构建 网站系统; 基于 `vitepress` 建立 `/docs` 构建 博客系统

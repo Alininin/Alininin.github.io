@@ -3,8 +3,8 @@
 layout: home
 
 hero:
-  name: "Alininin"
-  text: "Into the unknow"
+  name: "Awesome Life"
+  text: "Sewing and repairing for the world."
   tagline: My great project tagline
   actions:
     - theme: brand
