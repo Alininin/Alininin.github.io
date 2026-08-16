@@ -13,8 +13,12 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages
-  cancel-in-progress: false
+  # 同一个分组内的工作流任务互斥 + 禁用系统内置工作流
+  group: "pages-deploy"
+  # 连续多次推送，自动取消还没跑完的旧构建，避免堆积多个部署任务互相覆盖
+  # false: 任务排队，新旧两个任务全部跑完，在当前后面部署时间长，易造成部署打架、artifact 覆盖;
+  # 设置为 true 只部署最新更新的 action
+  cancel-in-progress: true
 
 jobs:
   build:
@@ -49,20 +53,29 @@ jobs:
           mkdir -p .output/public/docs
           cp -r docs/.vitepress/dist/* .output/public/docs/
 
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v5
-        with:
-          path: ./.output/public
+      - name: Print directory structure for debug
+        run: |
+          echo "===== .output/public ====="
+          ls -l -a .output/public
+          echo ""
+          echo "===== .output/public/docs ====="
+          ls -l -a .output/public/docs
 
   deploy:
     needs: build
-    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+    # PR阶段直接跳过部署Job，只做打包
+    if: (github.event_name == 'push' && github.ref == 'refs/heads/main') || github.event_name == 'workflow_dispatch'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     name: Deploy
     steps:
+      # 上传 github‑pages
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: ./.output/public
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
