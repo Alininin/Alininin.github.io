@@ -3,14 +3,20 @@
   <main class="home-page">
     <h1>I'm Alininin</h1>
     <div class="badge-wrap">
+      <a href="https://github.com/Alininin">
+        <img src="https://img.shields.io/badge/GitHub-Profile-24292f?logo=github" alt="GitHub Profile" />
+      </a>
       <a href="https://github.com/Alininin/Alininin.github.io">
         <!-- `%E5%8D%9A%E5%AE%A2` 为 博客 转义 -->
         <img src="https://img.shields.io/badge/%E5%8D%9A%E5%AE%A2-sourcecode-8c36db" alt="Website" />
       </a>
+      <a href="https://alininin.github.io/docs/">
+        <img src="https://img.shields.io/badge/Docs‑Blog-Document-3498db" alt="Docs Blog" />
+      </a>
       <img src="https://komarev.com/ghpvc/?username=Alininin&label=Views&color=orange&style=flat" alt="访问量统计" />
     </div>
     <div class="spacer"></div>
-    <p>Welcome to my GitHub Profile.</p>
+    <p>Welcome to my homepage <a href="https://alininin.github.io/">https://alininin.github.io/</a></p>
     <ul>
       <li>AI major｜Slowly exploring the world of programming</li>
       <li>Learning Python, C++ and everything related to computer science</li>
