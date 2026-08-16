@@ -61,21 +61,20 @@ jobs:
           echo "===== .output/public/docs ====="
           ls -l -a .output/public/docs
 
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: ./.output/public
+
   deploy:
     needs: build
-    # PR阶段直接跳过部署Job，只做打包
-    if: (github.event_name == 'push' && github.ref == 'refs/heads/main') || github.event_name == 'workflow_dispatch'
+    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     name: Deploy
     steps:
-      # 上传 github‑pages
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v5
-        with:
-          path: ./.output/public
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
