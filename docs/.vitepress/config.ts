@@ -2,8 +2,9 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "Alininin",
-  description: "Into the unknow",
+  base: '/docs/',
+  title: "Awesome Life",
+  description: "Sewing and repairing for the world.",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
