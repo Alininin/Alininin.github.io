@@ -4,7 +4,8 @@
     <h1>I'm Alininin</h1>
     <div class="badge-wrap">
       <a href="https://github.com/Alininin/Alininin.github.io">
-        <img src="https://img.shields.io/badge/Website-博客-8c36db" alt="Website" />
+        <!-- `%E5%8D%9A%E5%AE%A2` 为 博客 转义 -->
+        <img src="https://img.shields.io/badge/%E5%8D%9A%E5%AE%A2-sourcecode-8c36db" alt="Website" />
       </a>
       <img src="https://komarev.com/ghpvc/?username=Alininin&label=Views&color=orange&style=flat" alt="访问量统计" />
     </div>
